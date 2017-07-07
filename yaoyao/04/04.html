@@ -1,0 +1,190 @@
+<html>
+<head>
+</head>
+<style>
+	#contentBox{
+		border: 1px solid #000;
+		overflow: hidden;
+		/*将对象呈递为内联对象，但是对象的内容作为块对象呈递, 也就是说将contentBox作为内联对象,如果后面还有东西,在同一行,但他的内容,也就是activeBox/row 这些,就作为块对象呈现,不同行, 如果这里写block, contentBox自己是block,他的内容,该怎么呈现就怎么呈现*/
+		display: inline-block;
+		position: relative;
+	}
+	.box{
+		width: 40px;
+		height: 40px;
+		float: left;
+		border: 1px solid #aaa;
+		box-sizing: border-box;
+	}
+
+	.row {
+		/*如果contentBox里的display没有设置, 这里设置为block,为啥没作用?*/
+		/*display: block;*/
+		/*clear: both;*/
+	}
+
+	.activeBox{
+		position: absolute;;
+		left: 0;
+		top: 0;
+		width: 40px;
+		height: 40px;
+		/*float: right;*/
+	}
+
+	.activeBox .head{
+		width: 100%;
+		height: 20%;
+		background-color: red;
+	}
+
+	.activeBox .tail{
+		width: 100%;
+		height: 80%;
+		background-color: blue;
+	}
+	
+</style>
+
+<body>
+	<div id="contentBox">
+		<div class="activeBox" id="activeBox">
+			<div class="head"></div>
+			<div class="tail"></div>
+		</div>
+		<div id="0" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="1" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="2" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="3" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="4" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="5" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="6" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="7" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="8" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="9" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+
+	</div>
+	<div id="contr">
+		<input type="input" name="input" id="cmd">
+		<button id="run">执行</button>
+		<p>命令：</p>
+		<ul>
+			<li>GO      --向前移动一格</li>
+			<li>TUN LEF --向左转</li>
+			<li>TUN RIG --向右转</li>
+			<li>TUN BAC --向后转</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="04.js"></script>
+</body>
+</html>

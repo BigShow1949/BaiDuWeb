@@ -1,0 +1,65 @@
+<html>
+<head>
+
+</head>
+
+<style>
+	a{
+		color: white;
+		text-decoration: none;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+		background-color: red;
+		width: 50px;
+		text-align: center;
+	}
+
+	input{
+		height: 30px;
+		width: 200px;
+		padding: 0;
+		float: left;
+		border: 1px solid #fee;
+		box-sizing: border-box;
+
+		/*background-color: blue;*/
+	}
+	label{
+		display: inline-block;
+		float: left;
+		line-height: 30px;
+		margin-right: 30px;
+		/*background-color: red;*/
+	}
+
+	div .input{
+
+		float: left;
+	}
+
+	p{
+		font-size: 12px;
+		margin-top: 2px;
+
+		/*background-color: red;*/
+	}
+
+</style>
+
+
+<body>
+
+	<div>
+		<label>内容</label>
+		<div class="input">
+			<input type="a" name="a" id="inputValue">
+			<a href="#" id="searchBtn">查询</a>
+			<p id="result">结果：</p>
+		</div>
+	</div>
+	<!-- 页面的解析自上而下,如果放在上面,是找不到searchBtn的 -->
+	<script type="text/javascript" src="01.js"></script>
+</body>
+
+</html>
