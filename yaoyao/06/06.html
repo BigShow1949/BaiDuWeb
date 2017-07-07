@@ -1,12 +1,60 @@
 <html>
     <head>
         <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         #appear{
             width: 150px;
             height: 50px;
             font-size: 20px;
             background-color: rgb(47,170,210);
-            /*border: none;*/
+            border: none;
+        }
+        #outbox{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            display: none;
+            background-color: rgba(144,144,145,0.6);
+        }
+        #out{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform:translate(-50%,-50%);
+            width: 400px;
+            height: 120px;
+            border: 1px solid black;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #on{
+            height: 30px;
+            width: 400px;
+            background-color: rgb(132,132,132);
+            text-align: left;
+            font-size: 20px;
+        }
+        #under{
+            height: 90px;
+            width: 400px;
+            background-color: white;
+            position: relative;
+        }
+        #underbox{
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            /*background-color: blue;*/
+        }
+        #underbox button{
+            margin-right: 10px;
+            background-color: grey;
         }
         </style>
     </head>
@@ -15,5 +63,42 @@
 
     <body>
         <button id="appear">appear</button>
+        <div id="outbox">
+            <div id="out">
+                <div id="on">这是一个浮出层</div>
+                <div id="under">
+                    <div id="underbox">
+                        <button id="makeSure">makesure</button>
+                        <button id="cancel">cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var outbox = document.getElementById("outbox");
+            var appearCom = document.getElementById("appear");
+            var mask = document.getElementById("mask");
+            var makeSure = document.getElementById("makeSure");
+
+             appearCom.onclick = function(event){
+                outbox.style.display = "block";
+            }
+            outbox.onclick =function(event){
+                outbox.style.display = "none";
+            }
+            // mask.onclick = function(){
+            //     outbox.style.display = "block";
+            //     event.stopPropagation();
+            // }
+            makeSure.onclick = function(){
+                outbox.style.display = "none";
+                event.stopPropagation();
+            }
+        </script>
+
+
     </body>
+
+
 </html>
