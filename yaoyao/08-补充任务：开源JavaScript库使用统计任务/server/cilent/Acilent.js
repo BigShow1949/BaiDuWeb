@@ -22,12 +22,15 @@ function submit(){
 function ajax(rank){
 	
 	var xmlHttp = createXmlHttpRequest();
-	var url = "http://127.0.0.1:8002";
+	// var url = "http://127.0.0.1:8002";
+	var url = "www.baidu.com";
 	xmlHttp.open("POST",url); 
 	xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
 	xmlHttp.send("rank="+rank); 
 	xmlHttp.onreadystatechange = function(){
 		if ((xmlHttp.readyState == 4) && (xmlHttp.status == 200)){
+
+			alert("===========请求成功");
 			var res = xmlHttp.response;//此处不是responseText
 			console.log(res);
 			res = JSON.parse(res);

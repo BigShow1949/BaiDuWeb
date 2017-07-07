@@ -22,7 +22,8 @@ function submit(){
 function ajax(website, library){
 	
 	var xmlHttp = createXmlHttpRequest();
-	var url = "http://127.0.0.1:8001";
+	// var url = "http://127.0.0.1:8001";
+	var url="www.baidu.com";
 	xmlHttp.open("POST",url); 
 	xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
 	xmlHttp.send("website="+website+"&library="+library); 

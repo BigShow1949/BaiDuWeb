@@ -1,11 +1,11 @@
 ﻿*{
-	position:relative;
-	margin:0px;
-	padding:0px;
+	position: relative;
+	margin: 0px;
+	padding: 0px;
 }
 body{
-	margin:0 auto;
-	width:1200px;
+	margin: 0 auto;
+	width: 1200px;
 }
 body > header{
 	width:100%;
@@ -13,6 +13,8 @@ body > header{
 	height:50px;
 	align-items:center;
 	justify-content:space-around;
+
+	/*background-color: red;*/
 }
 body > header > a{
 	text-decoration:none;
@@ -25,36 +27,46 @@ body > header > a{
 	opacity:0.6;
 }
 .task{
-	width:80%;
-	margin:0 auto;
+	width: 80%;
+	margin: 0 auto;
+
+	/*background-color: green;*/
 }
 .task > form{
-	width:100%;
+	width: 100%;
+	/*background: blue;*/
 }
 .task > form input{
-	margin-top:10px;
-	width:100%;
-	height:30px;
-	font-size:20px;
+	margin-top: 10px;
+	width: 100%;
+	height: 30px;
+	font-size: 20px;
 }
 .task > form input:last-child{
-	font-size:14px;
-	margin:10px auto;
-	width:60px;
-	height:30px;
-}
-body table{
-	margin:0 auto;
+	font-size: 14px;
+	margin: 10px auto;
+	width: 60px;
+	height: 30px;
 }
 .focus{
-	background-color:blue;
+	background-color: blue;
 }
-#result{
-	display:flex;
-}
-.found{
-	color:green;
-}
-.notfind{
-	color:red;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
